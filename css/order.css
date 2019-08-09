@@ -1,0 +1,57 @@
+.check_tkorder_btn {
+	height: 24px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 12px; /* 字体大小 */
+	margin-left: 10px;	
+	padding: 0 5px 0 5px;
+	margin-top: -5px;
+}
+
+.tkres {
+	color: red;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.tkres_error {
+	color: green;
+}
+
+.taoke_qrcode {
+	width: 22px;
+	height: 22px;
+	line-height: 24px;
+	margin-bottom: -5px;
+    margin-left: 10px;
+}
+#show_tkqrcode
+{
+    height:290px;
+    width:200px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-150px;
+    margin-left:-100px;
+    margin-right:0px;
+    margin-bottom:0px;
+    border: solid 1px #ccc; 
+    background: white;
+    position: fixed;
+    box-shadow: 0 0 3px #000;
+    font-size: 12px;
+    text-align: center;
+}
+#tkqrcode img {
+	width: 180px;
+	height: 180px;
+	padding: 5px;
+	margin-top: 5px;
+}

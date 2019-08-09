@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+}
+#taoke-tool {
+	width: 320px;
+	text-align: center;
+	padding: 10px;
+}
+
+#taoke-tool table td {
+	font-size: 12px;
+}
+.input{
+    outline-style: none ;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    padding: 2px;
+    width: 260px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+}
+.submit { /* 按钮美化 */
+	height: 24px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 12px; /* 字体大小 */
+}
+.submit:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}
+</style>
+</head>
+<body>
+<div id="taoke-tool">
+	
+	
+	<table>
+		<tr>
+			<td style="text-align: center;" colspan="2">
+				<img src="images/logo.png" height="45" />
+				<h3>插件配置</h3>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input class="input" placeholder="请输入接口秘钥" id="userKey" type="text"   />
+			</td>
+			<td>
+				<input type="submit" id="doSubmit" class="submit" value="设置">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding: 10px;">
+			常见问题：	
+			
+			<p><a href="https://www.dingdanxia.com/article/28.html" target="_blank">1、如何获取接口秘钥</a></p>
+			<p><a href="https://www.dingdanxia.com/article/63.html" target="_blank">2、插件使用教程说明</a></p>
+			<p><a href="https://www.dingdanxia.com/doc/50/25" target="_blank">3、接口开发文档</a>，有开发能力者可调用api扩展自己的应用。</p>
+
+			<p>价格：0.01元/次检测，量大请联系客服获取更多优惠。</p>
+			
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align: center;"><img src="https://pay.dingdanxia.com/static/images/kf_qrcode.jpeg" width="120" height="120"></td>
+		</tr>
+	</table>
+</div>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/layer.js"></script>
+</body>
+</html>

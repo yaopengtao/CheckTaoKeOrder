@@ -1,0 +1,45 @@
+{
+  "name": "淘客订单检测",
+  "description": "可以检某个淘宝单号是否使用淘客下单",
+  "version": "1.0",
+  "browser_action": {
+      "default_title": "订单检测",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "icons":
+  {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background":
+  {
+    //"page": "background.html",
+    "scripts": ["js/jquery-1.8.3.js","js/background.js"]
+  },
+  "permissions":[
+    "webRequest", // web请求
+    "webRequestBlocking", // 阻塞式web请求
+    "storage",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus"
+  ],
+  "content_scripts": 
+  [
+    {
+      "matches": ["https://trade.taobao.com/*","https://buyertrade.taobao.com/*"],
+      // "<all_urls>" 表示匹配所有地址
+      //"matches": ["<all_urls>"],
+      // 多个JS按顺序注入
+      "js": ["js/jquery-1.8.3.js","js/order.js","js/jquery.qrcode.min.js"],
+      "css": ["css/order.css","js/theme/default/layer.css"],
+      // 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["js/jquery-1.8.3.js", "js/inject.js","js/jquery.qrcode.min.js"],
+  "manifest_version": 2,
+  "homepage_url": "https://www.dingdanxia.com/doc/50/25"
+}
