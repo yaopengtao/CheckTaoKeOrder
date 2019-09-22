@@ -16,7 +16,7 @@ function create_btn()
 		if($(".bought-wrapper-mod__trade-order___2lrzV").size())
 		{
 			$(".bought-wrapper-mod__trade-order___2lrzV").each(function(index){
-				var dom_html = '  <input onclick="check_tk_order(this)" class="check_tkorder_btn" index="'+index+'" order="'+$(this).attr("data-id")+'" type="button" value="检测淘客" /> <img onmouseover="show_tkqrcode(\''+$(this).attr("data-id")+'\')" class="taoke_qrcode" src="https://img.alicdn.com/imgextra/i1/436176214/O1CN01hAWzja1vm3hNeyImK_!!436176214.png" title="手淘扫码" />';
+				var dom_html = '  <input onclick="check_tk_order(this)" class="check_tkorder_btn" index="'+index+'" order="'+$(this).attr("data-id")+'" type="button" value="检测淘客" /> <img onmouseout="show_tkqrcode(0)" onmouseover="show_tkqrcode(\''+$(this).attr("data-id")+'\')" class="taoke_qrcode" src="https://img.alicdn.com/imgextra/i1/436176214/O1CN01hAWzja1vm3hNeyImK_!!436176214.png" title="手淘扫码" />';
 				$(".bought-wrapper-mod__thead-operations-container___2LwDA").eq(index).append(dom_html);
 			});
 		}
@@ -26,7 +26,7 @@ function create_btn()
 		{
 			
 			$("input[name=orderid]").each(function(index){
-				var dom_html = ' <input onclick="check_tk_order(this)" class="check_tkorder_btn" index="'+index+'" order="'+$(this).val()+'" type="button" value="检测淘客" /> <img onmouseover="show_tkqrcode(\''+$(this).val()+'\')" class="taoke_qrcode" src="https://img.alicdn.com/imgextra/i1/436176214/O1CN01hAWzja1vm3hNeyImK_!!436176214.png" title="手淘扫码" />';
+				var dom_html = ' <input onclick="check_tk_order(this)" class="check_tkorder_btn" index="'+index+'" order="'+$(this).val()+'" type="button" value="检测淘客" /> <img onmouseout="show_tkqrcode(0)" onmouseover="show_tkqrcode(\''+$(this).val()+'\')" class="taoke_qrcode" src="https://img.alicdn.com/imgextra/i1/436176214/O1CN01hAWzja1vm3hNeyImK_!!436176214.png" title="手淘扫码" />';
 				$(this).parent().append(dom_html);
 			});
 			

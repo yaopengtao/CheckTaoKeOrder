@@ -30,6 +30,7 @@ function ajax_request(_this, apikey)
 					$(_this).after(tkInfo);
 	        	}
 	        } else {
+	        	alert(res.msg+" \n 订单侠官方网址：www.dingdanxia.com");
 	        }
 	        $(_this).val("重新检测");
 	    },  
@@ -42,13 +43,16 @@ function ajax_request(_this, apikey)
 function show_tkqrcode(order_no)
 {
 	$("#show_tkqrcode").remove();
+	if (order_no)
+	{
+		var html = '<div id="show_tkqrcode">订单号：'+order_no+'<br><div id="tkqrcode"></div><font color="red">【请使用手淘App扫码上方二维码】</font><br><a href="https://www.dingdanxia.com/article/69.html" target="_blank">点击查看如何辨别淘客订单</a><a href="javascript:;" onclick="$(\'#show_tkqrcode\').remove()" style="display:block;margin-top: 10px;">关闭窗口</a></div>';
+		$("body").append(html);
+		new QRCode(document.getElementById("tkqrcode"), {
+			text : "http://mos.m.taobao.com/union/query_cps_result?tbTradeParentId="+order_no,
+			height:180,
+			width:180
+		});
+	}
 
-	var html = '<div id="show_tkqrcode">订单号：'+order_no+'<br><div id="tkqrcode"></div><font color="red">【请使用手淘App扫码上方二维码】</font><br><a href="https://www.dingdanxia.com/article/69.html" target="_blank">点击查看如何辨别淘客订单</a><a href="javascript:;" onclick="$(\'#show_tkqrcode\').remove()" style="display:block;margin-top: 10px;">关闭窗口</a></div>';
-	$("body").append(html);
-	new QRCode(document.getElementById("tkqrcode"), {
-		text : "http://mos.m.taobao.com/union/query_cps_result?tbTradeParentId="+order_no,
-		height:180,
-		width:180
-	});
 }
 
