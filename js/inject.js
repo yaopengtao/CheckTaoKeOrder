@@ -20,7 +20,7 @@ function ajax_request(_this, apikey)
 	    success:function(res) {  
 	        if (res.code == 200)
 	        {
-	        	if (res.data.orders.length > 0)
+	        	if (res.data.taoke == true)
 	        	{
 	        		var tkInfo= '<span class="tkInfo_'+order+' tkres">淘客订单</span>';
 					$(_this).parent().parent().parent().css("background","#FFEB3B");
